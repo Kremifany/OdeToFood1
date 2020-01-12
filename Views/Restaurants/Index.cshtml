@@ -1,0 +1,15 @@
+﻿@model IEnumerable<OddToFood.Data.Models.Restaurant>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+fkreminsky@gmail.com@(Model.Count())
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@foreach(var item in Model)
+{
+    @Html.Partial("_RestautantSummary",item)
+}  
